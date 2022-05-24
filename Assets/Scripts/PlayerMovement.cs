@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(speed * Time.deltaTime * move);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && !PauseMenu.paused)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
